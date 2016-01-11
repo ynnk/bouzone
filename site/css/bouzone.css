@@ -1,0 +1,41 @@
+#menu-top a.item {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    z-index: 0;
+    transition: color 0.2s ease 0s;
+    outline: medium none;    
+}
+
+#menu-top .down.item {
+    text-align: center;
+    display: block;
+}
+
+#menu-top .row {
+    padding: 0px;
+}
+
+p code {
+    font-size:13px;
+    
+}
+
+#echappees .row.legende {
+    padding-top:0px
+}
+#echappees .row.centered {
+    padding-bottom:0px
+}
+
+.row .column.footer{
+    margin-top:20px !important;
+    margin-bottom:40px !important;
+}
+
+.ui.divider span.credit {
+    text-transform: initial;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "bou.zone",
+  "version": "0.1",
+  "main": "",
+  "dependencies"  : {
+
+    "jquery"  : "",
+    "backbone"  : "",
+    "semantic-ui"  : ""
+  },
+  "ignore": [
+    "src",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "http://bou.zone"
+}

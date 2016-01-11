@@ -1,0 +1,25 @@
+extends ./inc/page.jade
+
+block site
+
+    h1.ui.header bou.zone
+      .sub.header cirque . théâtre
+
+
+
+block title
+
+block content
+
+    h1.ui.header Training day
+        .sub.header Hélène Bou - corde lisse - 2015
+        
+    .ui.embed(data-source="vimeo" data-url="http://player.vimeo.com/video/144472676")
+
+    //-
+        iframe(src="http://player.vimeo.com/video/142394496",width="561",height="316", frameborder="0", webkitAllowFullScreen, mozallowfullscreen, allowFullScreen) 
+
+    script(src="bower_components/jquery/dist/jquery.min.js")
+    script(src="bower_components/semantic-ui/dist/semantic.min.js")
+    script.
+        $('.ui.embed').embed();

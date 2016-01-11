@@ -1,0 +1,68 @@
+doctype html(lang='fr')
+html
+    include ./html-header.jade
+
+    body
+        .ui.hidden.divider
+    
+        #menu-top.ui.container.grid
+            .centered.row
+                .column.center.aligned
+                    
+                    block site    
+                    
+                    .ui.secondary.compact.text.stackable.container.menu
+
+                        a.item(href='index.html')
+                          i.icon.home
+                        a.item.left.title(href='helene-bou-bio.html')
+                          | Who's Bou?
+
+                        div.down.item
+                          i.tiny.asterisk.icon
+                        a.item.left.title(href='opsis.html')
+                          | Opsis
+                        a.item.left.title(href='quinn.html')
+                          | Quinn
+                        a.item.left.title(href='synopsis.html')
+                          | SynOPSIS
+
+                        div.down.item
+                          i.tiny.asterisk.icon
+                            
+                        a.item.left.title(href='echappees.html')
+                          | Echappées
+                        a.item.left.title(href='contact.html')
+                          | Contact
+
+            .centered.row
+                .twelve.wide.column.center.aligned
+                    .ui.divider
+
+
+        .ui.container.grid
+          .centered.row
+            .left.aligned.column
+
+                .ui.two.column.grid
+                    .column
+
+                        block title
+                        
+                    .bottom.aligned.column
+
+                        block meta
+
+                
+          .centered.row
+            .left.aligned.justified.column
+                
+                block content
+
+        
+          .centered.row
+            .right.aligned.column.footer
+
+                .ui.divider bou.zone ©  
+                    span.credit 2016 / Y.Chudy - H.Bou
+                    

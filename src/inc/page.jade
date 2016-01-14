@@ -3,9 +3,9 @@ html
     include ./html-header.jade
 
     body
-        .ui.hidden.divider
     
         #menu-top.ui.container.grid
+            .ui.hidden.divider
             .centered.row
                 .column.center.aligned
                     
@@ -40,11 +40,12 @@ html
                     .ui.divider
 
 
-        .ui.container.grid
+        .ui.text.container.grid
           .centered.row
             .left.aligned.column
 
-                .ui.two.column.grid
+                .ui.two.column.stackable.grid
+                  .row
                     .column
 
                         block title
@@ -60,9 +61,16 @@ html
                 block content
 
         
-          .centered.row
-            .right.aligned.column.footer
+          #footer.centered.row
+            .right.aligned.column
 
-                .ui.divider bou.zone ©  
-                    span.credit 2016 / Y.Chudy - H.Bou
-                    
+                .ui.divider    
+                  | bou.zone © 2016    
+                  div.credit
+                      span  Y.Chudy - H.Bou
+                      a.icon(href="https://www.facebook.com/profile.php?id=100009483314907",target="_blank",title='Hélène Bou is on Facebook')
+                        i.facebook.grey.icon
+                      a.icon(href="https://vimeo.com/user41158124",target="_blank",title='Viméo - Bou')
+                        i.vimeo.grey.icon
+                      a.icon(href='mailto:contact@bou.zone',title='contact email')  
+                        i.mail.outline.grey.icon

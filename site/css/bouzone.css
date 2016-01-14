@@ -28,14 +28,27 @@ p code {
     padding-bottom:0px
 }
 
-.row .column.footer{
+#echappees img {
+/*
+    min-width:120px;
+*/
+}
+
+#footer.row .column{
     margin-top:20px !important;
     margin-bottom:40px !important;
 }
 
-.ui.divider span.credit {
+#footer .ui.divider {
+    padding:3px;
+}
+#footer .ui.divider .credit {
     text-transform: initial;
     font-weight: 500;
     letter-spacing: 0.01em;
+    display:inline-block;
+/*
+    padding-right: 40px;
+*/
 }
 

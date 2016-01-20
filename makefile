@@ -21,6 +21,9 @@ build:
 	@echo "building " > ./site/build.html 
 	rm ./site/*.html
 	node compile-babel-jade.js src/*.jade ./site
+	# sitemap
+	@echo "\n * Writing sitemap.txt"
+	cd site && ls *.html | sed  s/^/http:\\/\\/bou.zone\\// > sitemap.txt
 
 archive:
 	tar -czf bou.zone.tar.gz ./site makefile ./src	bower.json compile-babel-jade.js

@@ -1,5 +1,9 @@
 extends ./inc/page.jade
 
+block referencement
+    meta( property="og:title", content="Contact Hélene Bou ")
+    meta(property="og:image", content="http://bou.zone/images/quinn/harley-03.jpeg")
+
 block title
 
   h1 Contact
@@ -16,7 +20,7 @@ block content
 
         .middle.aligned.column
         
-          h5 BOU Hélène
+          h4 BOU Hélène
           //-  
             i.phone.icon
             | +336 76 19 96 03 <br/>
@@ -28,13 +32,18 @@ block content
             i.big.facebook.square.icon
           a.ui.icon.primary(href="https://vimeo.com/user41158124",target="_blank")
             i.big.vimeo.icon
-                
 
-          h5 Production et administration
+          .ui.hidden.divider
+          i.grey.remove.bookmark.icon
+          .ui.hidden.divider
+
+          h4 Production et administration
 
           p.
-            Les Thérèses <br/>
-            ZI de Pahin  <br/>
+            Les Thérèses
+            
+          p.
+            #[i.marker.icon] ZI de Pahin  <br/>
             6, impasse Marcel Paul <br/>
             31170 TOURNEFEUILLE <br/>
             

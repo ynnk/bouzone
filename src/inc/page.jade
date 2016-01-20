@@ -1,58 +1,71 @@
-doctype html(lang='fr')
-html
-    include ./html-header.jade
+doctype html
+html(lang='fr')
 
+    head 
+        include ./html-header.jade
+        
+        block referencement
+            title Bou.zone cirque.théâtre
+            meta(name="image", content="http://bou.zone/images/opsis/opsis_amb_1.jpg")
     body
-    
-        #menu-top.ui.container.grid
+
+        block home    
+        
+        #menu-top.ui.container.text.grid
             .ui.hidden.divider
             .centered.row
-                .column.center.aligned
-                    
-                    block site    
-                    
-                    .ui.secondary.compact.text.stackable.container.menu
+              .center.aligned.column
+                .ui.three.column.stackable.grid
+                   .row 
+                      .column
+                        .ui.secondary.compact.text.menu
+                            a.item(href='index.html')
+                              i.icon.home
+                            a.item.left.title(href='helene-bou-bio.html')
+                              | Who's Bou?
 
-                        a.item(href='index.html')
-                          i.icon.home
-                        a.item.left.title(href='helene-bou-bio.html')
-                          | Who's Bou?
-
-                        div.down.item
-                          i.tiny.asterisk.icon
-                        a.item.left.title(href='opsis.html')
-                          | Opsis
-                        a.item.left.title(href='quinn.html')
-                          | Quinn
-                        a.item.left.title(href='synopsis.html')
-                          | SynOPSIS
-
-                        div.down.item
-                          i.tiny.asterisk.icon
-                            
-                        a.item.left.title(href='echappees.html')
-                          | Echappées
-                        a.item.left.title(href='contact.html')
-                          | Contact
+                      .column
+                        .ui.secondary.compact.text.menu
+                            div.down.item
+                              i.tiny.asterisk.icon
+                            a.item.left.title(href='opsis.html')
+                              | Opsis
+                            a.item.left.title(href='quinn.html')
+                              | Quinn
+                            a.item.left.title(href='synopsis.html')
+                              | SynOPSIS
+                            div.down.item
+                              i.tiny.asterisk.icon
+                                
+                      .column
+                        .ui.secondary.compact.text.menu
+                            a.item.left.title(href='echappees.html')
+                              | Echappées
+                            a.item.left.title(href='contact.html')
+                              | Contact
 
             .centered.row
-                .twelve.wide.column.center.aligned
+                .column.center.aligned
                     .ui.divider
 
-
-        .ui.text.container.grid
-          .centered.row
+        
+        .ui.container.grid
+          #article-top.centered.row
             .left.aligned.column
 
-                .ui.two.column.stackable.grid
+                .ui.three.column.stackable.grid
                   .row
                     .column
-
+                        a(name="42")
                         block title
                         
                     .bottom.aligned.column
 
                         block meta
+                        
+                    .bottom.aligned.column
+
+                        block infos
 
                 
           .centered.row
@@ -64,10 +77,30 @@ html
           #footer.centered.row
             .right.aligned.column
 
-                .ui.divider    
-                  | bou.zone © 2016    
-                  div.credit
-                      span  Y.Chudy - H.Bou
+                  //- Load Facebook SDK for JavaScript
+                  .ui.divider
+                    //-
+                      #fb-root
+                        script.
+                            (function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+
+                        //- Your like button code 
+                          .fb-like( 
+                            data-href="http://www.your-domain.com/your-page.html" ,
+                            data-layout="standard" ,
+                            data-action="like" ,
+                            data-show-faces="true")
+
+
+                    div.credit
+                      | bou.zone © 2016
+                      a.link.text(href='credits.html', title="CREDITS - conception et réalisation bleuetdoré")  bleuetdoré
                       a.icon(href="https://www.facebook.com/profile.php?id=100009483314907",target="_blank",title='Hélène Bou is on Facebook')
                         i.facebook.grey.icon
                       a.icon(href="https://vimeo.com/user41158124",target="_blank",title='Viméo - Bou')

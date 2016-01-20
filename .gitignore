@@ -4,4 +4,5 @@ bou.zone.tar.gz
 drive/
 node_modules/
 site/*.html
+site/sitemap.txt
 site/bower_components

@@ -1,14 +1,32 @@
 extends ./inc/page.jade
 
+block referencement
+
+    title  Hélène Bou / Quinn - Suite pour corde et 100 visages
+    meta(name='description' content='Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016')
+    
+    meta(name='og:image' content='http://bou.zone/images/quinn/quinn_01.png')
+
+
+    
+    
 block title
 
   h1.ui.header Quinn
-    .sub.header Une corde, 100 visages.
-
+    .sub.header Suite pour corde et 100 visages
+    
 block meta
+    p
+      strong Durée : 30 min
+      br/
+      span Tout public à partir de 10 ans
+
+block infos
   
-    p En cours de création<br/>Sortie prévue : mai 2016<br/>
-        strong Durée : 30 min
+    p
+      span En cours de création
+      br/
+      span Sortie prévue : mai 2016
 
 block content
 

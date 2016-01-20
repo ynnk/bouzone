@@ -11,7 +11,7 @@
         title  Hélène Bou / Quinn - Suite pour corde et 100 visages
         meta(name='description' content='Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016')
 
-        //- facebook 
+        //- facebook optimisations
         //- name=og:type  content=website|article
         
         meta(name='og:url' content='http://bou.zone/quinn.html')
@@ -22,7 +22,7 @@
         meta(name='og:description' content='Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016')
 
 
-### test des url a linker ds facebook
+#### test des url a linker ds facebook
 
 https://developers.facebook.com/tools/debug/og/object/
 
@@ -30,5 +30,18 @@ https://developers.facebook.com/tools/debug/og/object/
 
 ## Contenu
 
-### images
+### Images
+    //- tag
+    img.ui[.taille][.position].image(&attributes)
+    
+    //- class:    
+    //- taille = tiny, small, big, huge, massive, fluid  
+    //- position = centered
+    
+    //- attributes:    
+    //- src = lien relatif vers l image
+    //- alt = courte description de l'image
+    
+    //- exemple
+    img.ui.fluid.centered.image(src="/images/quinn/quinn_01.png", alt="Projet Quinn, Résidence de travail ")
 

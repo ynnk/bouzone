@@ -2,7 +2,9 @@
 
 
 
-# Referencement
+## Referencement
+
+### Ajouter des meta informations dans chaque page
 
     block referencement
 
@@ -16,4 +18,4 @@
 
 ### test des url a linker ds facebook
 
-    https://developers.facebook.com/tools/debug/og/object/
+https://developers.facebook.com/tools/debug/og/object/

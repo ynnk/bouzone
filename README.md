@@ -43,5 +43,5 @@ https://developers.facebook.com/tools/debug/og/object/
     //- alt = courte description de l'image
     
     //- exemple
-    img.ui.fluid.centered.image(src="/images/quinn/quinn_01.png", alt="Quinn - corde lisse. Hélène Bou résidence de travail @ le Lido - centre des arts du cirque de Toulouse  ") ")
+    img.ui.fluid.centered.image(src="/images/quinn/quinn_01.png", alt="Quinn - corde lisse. Hélène Bou résidence de travail @ le Lido - centre des arts du cirque de Toulouse")
 

@@ -14,11 +14,11 @@
         //- facebook optimisations
         //- name=og:type  content=website|article
         
-        meta(name='og:url' content='http://bou.zone/quinn.html')
-        meta(name='og:site_name' content='bou zone')
+        meta(name='og:url' content='http://example.com/quinn.html')
+        meta(name='og:site_name' content='example')
         meta(name='og:type' content='article')
         meta(name='og:locale' content='fr_FR')
-        meta(name='og:image' content='http://bou.zone/images/quinn/quinn_01.png')
+        meta(name='og:image' content='http://example.com/images/quinn/quinn_01.png')
         meta(name='og:description' content='Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016')
 
 
@@ -29,7 +29,8 @@ https://developers.facebook.com/tools/debug/og/object/
 
 
 ## Contenu
-
+    //- Ceci est un commentaire non affiché
+    
 ### Images
     //- tag
     img.ui[.taille][.position].image(&attributes)

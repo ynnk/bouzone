@@ -1,0 +1,135 @@
+
+
+//- ----------------------------------------------------
+//- jade template
+//- http://jade-lang.com/
+//- ----------------------------------------------------
+
+
+extends ./inc/page.jade
+
+
+block referencement    
+    -
+      var meta = {
+
+        //- titre dans le navigateur , pour les liens facebook
+        //- et affiché par les moteurs de recherche.
+
+        'title': "",
+        
+        
+        //- image pour les liens facebook
+
+        'image': "",
+
+
+        //- description pour les liens facebook et les moteurs de recherche
+        
+        'description': ""
+
+      }
+
+
+
+block title
+
+   h1.ui.header Un bon titre d article
+    .sub.header il est très utilisé par les moteurs de recherche
+    
+
+
+block meta
+
+  strong 
+  br/
+  span 
+  
+
+
+block content
+
+  //-      
+  //- un espace vertical entre 2 sections
+  //-      
+  
+  .ui.hidden.divider
+
+  //-      
+  //- Titres   
+  //-      
+  
+
+ 
+  h3  un titre
+  h4 sous titre
+
+
+  h1.ui.header Joli Gros titre
+    .sub.header et sous titre
+    
+  h3.ui.header Joli ptit titre
+    .sub.header avec sous titre
+
+    
+  //-      
+  //- text   
+  //-      
+  
+  p.
+    some text
+
+  //- saut de ligne
+  br/
+  p.
+    du text avant <br/> et apres le saut de ligne
+
+  //-      
+  //- icons   
+  //- tiny, small , "", large, big, huge or massive     
+  //-      
+  i.home.small.grey.icon
+    
+    
+  //-      
+  //- links   
+  //-      
+
+  //- une ancre que l on peut atteindre
+  a(name='unnom')  
+
+  //- sur une nouvelle ligne
+  a.link(href="lien/vers/la/page")
+  a.link(href="http://example.com/lien/vers/la/page")
+
+  //- avec icon
+    a.icon(href="https://www.facebook.com/profile.php?id=id",target="_blank",title='Someone is on Facebook')
+        i.facebook.grey.icon
+
+  //- dans du text
+  p.
+    du text ou il y a #[a.link(href="http://example.com/lien/vers/la/page") un lien  ] vers un autre site
+    br/
+    du text ou il y a #[a.link(href="lien/vers/la/page") un lien  ] vers une autre page
+    br/
+    du text ou il y a #[a.link(href="#unnom") un lien  ] vers une ancre dans cette page
+
+   
+  //-      
+  //- images
+  //- tiny, small , "", large, big, huge or fluid     
+
+  img.ui.fluid.centered.image(src="/images/path")
+
+  //-      
+  //- Ajout d une video   
+  //-      
+
+  .ui.embed(data-source="vimeo" data-url="http://player.vimeo.com/video/___movie_id" )
+    
+  script(src="bower_components/jquery/dist/jquery.min.js")
+  script(src="bower_components/semantic-ui/dist/semantic.min.js")
+  script.
+    $('.ui.embed').embed();
+
+

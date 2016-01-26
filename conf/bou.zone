@@ -1,0 +1,42 @@
+server {
+        listen 80 ;
+        # listen [::]:80 default_server ipv6only=on;
+
+        # root /home/ynnk/bou.zone/site;
+        root /work/git/bou.git/site;
+        
+        index index.html index.htm;
+
+        server_name localhost www.bou.zone bou.zone;
+
+        location / {
+            root /work/git/bou.git/site;
+            try_files $uri $uri/ =404;
+        }
+
+        location /private/ {
+            auth_basic "private place";
+            auth_basic_user_file /work/git/bou.git/conf/.htprivate;
+        }
+
+        location ~ ^/cgi-bin/writeflag.sh$ {
+            
+            auth_basic "admin place";
+            auth_basic_user_file /work/git/bou.git/conf/.htadmin;
+        
+            gzip off;
+            root /work/git/bou.git/;
+
+            # Fastcgi socket & parameters, include the standard ones
+            fastcgi_pass  unix:/var/run/fcgiwrap.socket;
+            include /etc/nginx/fastcgi_params;
+            #fastcgi_pass  127.0.0.1:9000;
+
+
+            # Adjust non standard parameters (SCRIPT_FILENAME)
+            fastcgi_param DEPLOY_FLAG  /work/git/bou.git/deploy/deploy.site.flag;
+        }
+        
+        rewrite ^/admin$ /cgi-bin/writeflag.sh last;
+        
+}

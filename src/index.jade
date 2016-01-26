@@ -2,11 +2,15 @@ extends ./inc/page.jade
 
 block referencement
 
-    title  Bou.zone - cirque.théâtre
-    meta(name="image", content="http://bou.zone/images/opsis/opsis_amb_1.jpg")
-    meta(name="description", content="Hélène Bou, artiste de cirque aérien en corde lisse et comédienne")
-    
+    -
+      var meta = { 
+        'title': "Bou.zone - cirque.théâtre",
+        
+        'image': "http://bou.zone/images/opsis/opsis_amb_1.jpg",
 
+        'description': "Hélène Bou, artiste de cirque aérien en corde lisse et comédienne. Projets, échappées, vidéos, contact"
+      }
+      
 
 block home
   .ui.container.grid
@@ -14,7 +18,7 @@ block home
     .centered.row
       .column.center.aligned
         h1.ui.header bou.zone
-          .sub.header cirque . théâtre
+          .sub.header cirque aérien . théâtre
 
 
 

@@ -1,9 +1,10 @@
-.PHONY: install build
+.PHONY: install build site
 
 all: install build archive run
 
 
-install: npm bower
+install: env npm bower
+	
 
 npm:
 	npm install jade-babel --save
@@ -19,11 +20,8 @@ build:
 	@echo "\n * Building jade -> html"
 	@echo " --------------------------\n"
 	@echo "building " > ./site/build.html 
-	rm ./site/*.html
+	
 	node compile-babel-jade.js src/*.jade ./site
-	# sitemap
-	@echo "\n * Writing sitemap.txt"
-	cd site && ls *.html | sed  s/^/http:\\/\\/bou.zone\\// > sitemap.txt
 
 archive:
 	tar -czf bou.zone.tar.gz ./site makefile ./src	bower.json compile-babel-jade.js
@@ -35,3 +33,11 @@ run:
 	@echo "\n * Accès au site avec chrome ou firefox:  http://localhost:8000 "
 	cd site &&	python -m SimpleHTTPServer 8000
 
+page:
+	
+	@echo "\n * creating page ./src/${NAME}.jade"
+	cp ./src/unepage.jade.example ./src/${NAME}.jade
+	@echo "\n * Now edit this page with your content \n\t ./src/${NAME}.jade \n\n"
+
+site:
+	./bin/site.cron.sh

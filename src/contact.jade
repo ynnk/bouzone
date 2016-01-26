@@ -1,16 +1,22 @@
 extends ./inc/page.jade
 
 block referencement
-    meta( property="og:title", content="Contact Hélene Bou ")
-    meta(property="og:image", content="http://bou.zone/images/quinn/harley-03.jpeg")
+    -
+      var meta = { 
+        'title': "Hélène Bou / Contact",
+        
+        'image': "http://bou.zone/images/quinn/harley-03.jpeg",
 
+        'description': "Contact Artiste: Hélène Bou, production les Thérèses"
+
+      }
+      
 block title
 
   h1 Contact
 
 
 block content
-
 
   .ui.two.column.grid  
     .centered.row

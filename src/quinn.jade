@@ -1,16 +1,15 @@
 extends ./inc/page.jade
 
 block referencement
+    -
+      var meta = { 
+        'title': "Hélène Bou / Quinn - Suite pour corde et 100 visages",
+        
+        'image': "http://bou.zone/images/quinn/quinn_01.png",
 
-    title  Hélène Bou / Quinn - Suite pour corde et 100 visages
-    
-    meta(name='description', content='Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016')
-    
-    meta(name='og:image', content='http://bou.zone/images/quinn/quinn_01.png')
-    meta(name='og:description', content='Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016')
+        'description': "Durée : 30 min. Spectacle tout public à partir de 10 ans.  Sortie prévue : mai 2016"
 
-
-
+      }
     
     
 block title
@@ -33,11 +32,11 @@ block infos
 
 block content
 
-  img.ui.fluid.centered.image(src="/images/quinn/quinn_01.png")
+  img.ui.fluid.centered.image(src="/images/quinn/quinn_01.png", alt=" Quinn - corde lisse. Hélène Bou @ La Grainerie -  Toulouse  ")
   
   .ui.hidden.divider
 
-  h3 Note d'intention :
+  h3 Note d'intention
   p.  
     Des masques, des dizaines qui jonchent le sol et recouvrent entièrement le tapis sous une corde qui pend. Des dizaines de visages aux orbites vides qui regardent vers le ciel. Un personnage arrive sur la scène, son visage est plongé dans l'obscurité. C'est comme s'il reprenait une tâche en cours. Il saisit un des masques et le plaque sur son visage. Il monte sur la corde. La danse prend la couleur du masque. Blanc, noir, or ...<br/>
     Les masques sont rejetés sur le sol, certains se brisent. Cimetière de visages.<br/>
@@ -71,12 +70,12 @@ block content
 
   .ui.hidden.divider
 
-  .ui.two.column.grid  
-    .centered.row
+  .ui.grid  
+    .doubling.two.column.centered.row
 
         .middle.left.aligned.column
 
-          h3 Avec :
+          h3 Distribution
           p.
             Hélène BOU - corde lisse /théâtre physique<br/>
             Christophe CALASTRENG - régie son

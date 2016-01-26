@@ -1,12 +1,16 @@
 extends ./inc/page.jade
 
-block referencement
+block referencement    
+    -
+      var meta = {
+          
+        'title': "Hélène Bou / Echappées",
+        
+        'image': "http://bou.zone/images/echappees/jetlag_2015_1.jpg",
 
-    title  Bou.zone /  Echappées
-    meta(name='description', content='Hélène Bou Echappées')
-    meta(name='og:image', content='http://bou.zone/images/echappees/jetlag_2015_1.jpg')
-    
+        'description': "Hélène Bou Echappées"
 
+      }
 
 block title
 
@@ -19,13 +23,13 @@ block content
             
       .centered.bottom.aligned.row
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/lanta_2015_3.png")
+            img.ui.fluid.rounded.image(src="images/echappees/lanta_2015_3.png", alt="Hélène Bou @ résidence Lanta ")
 
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/lanta_2015_1.png")
+            img.ui.fluid.rounded.image(src="images/echappees/lanta_2015_1.png", alt="Hélène Bou @ résidence Lanta ")
 
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/lanta_2015_2.png")
+            img.ui.fluid.rounded.image(src="images/echappees/lanta_2015_2.png", alt="Hélène Bou @ résidence Lanta ")
       .row.legende
         .left.aligned.three.wide.column
             p Lanta 2015
@@ -33,53 +37,56 @@ block content
             
       .centered.bottom.aligned.row
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/grainerie_1.jpg")
+            img.ui.fluid.rounded.image(src="images/echappees/grainerie_1.jpg", alt="Hélène Bou @ La grainerie - Toulouse")
 
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/grainerie_2.jpg")
+            img.ui.fluid.rounded.image(src="images/echappees/grainerie_2.jpg", alt="Hélène Bou @ La grainerie - Toulouse")
 
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/grainerie_3.jpg")
+            img.ui.fluid.rounded.image(src="images/echappees/grainerie_3.jpg", alt="Hélène Bou @ La grainerie - Toulouse")
       .row.legende
         .left.aligned.column
             p Grainerie 2015
 
 
+
+      - var alt_myrys = "Hélène Bou @ JetLag festival Mix’Art Myrys - Toulouse - juin 2015"
+
       .centered.bottom.aligned.row
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/jetlag_2015_1.jpg")
+            img.ui.fluid.rounded.image(src="images/echappees/jetlag_2015_1.jpg", alt=alt_myrys)
 
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/jetlag_2015_2.jpg")
+            img.ui.fluid.rounded.image(src="images/echappees/jetlag_2015_2.jpg", alt="Hélène Bou @ JetLag festival Mix’Art Myrys - Toulouse - juin 2015")
 
         .centered.aligned.column
-            img.ui.fluid.rounded.image(src="images/echappees/jetlag_2015_3.jpg")
+            img.ui.fluid.rounded.image(src="images/echappees/jetlag_2015_3.jpg", alt="Hélène Bou @ JetLag festival Mix’Art Myrys - Toulouse - juin 2015")
       .row.legende
         .left.aligned.sixteen.wide.column
             p #[a(target="_blank", href="http://mixart-myrys.org/programmation2/20-15/juin/jetlag/") JetLag festival] à #[a(target="_blank", href="http://mixart-myrys.org") Mix’Art Myrys] - juin 2015.
+
             
             
-            
+      - var alt_ambeyrac = "Hélène Bou @ Ambeyrac fait son cirque - Ambeyrac (Aveyron) - aout 2015"
+      
       .centered.row
-        .four.wide.centered.aligned.column
-            img.ui.medium.centered.rounded.image(src="images/echappees/ambeyrac_2015_4.jpeg")
+        .four.wide.left.aligned.column
+            img.ui.medium.centered.rounded.image(src="images/echappees/ambeyrac_2015_4.jpeg", alt=alt_ambeyrac)
             br/
-            img.ui.small.centered.rounded.image(src="images/echappees/ambeyrac_2015_5.jpeg")
+            img.ui.small.centered.rounded.image(src="images/echappees/ambeyrac_2015_5.jpeg", alt=alt_ambeyrac)
 
         .top.right.aligned.twelve.wide.column
-            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_6.jpeg")
-            p  Ambeyrac 2015.
+            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_6.jpeg", alt=alt_ambeyrac)
 
       .centered.row
         .column
-            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_1.jpeg")
+            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_1.jpeg", alt=alt_ambeyrac)
+        .column
+            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_2.jpeg", alt=alt_ambeyrac)
 
         .column
-            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_2.jpeg")
-
-        .column
-            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_3.jpeg")
+            img.ui.fluid.rounded.image(src="images/echappees/ambeyrac_2015_3.jpeg", alt=alt_ambeyrac)
 
       .row.legende
         .left.aligned.sixteen.wide.column
-            p  Ambeyrac 2015.
+            p  Ambeyrac fait son cirque - aout 2015. presse: #[a(href="http://www.ladepeche.fr/article/2015/08/25/2164355-ambeyrac-fait-son-cirque.html", target="_blank") La Dépêche du Midi]

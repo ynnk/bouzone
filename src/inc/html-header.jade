@@ -6,11 +6,18 @@ meta(name='viewport', content='width=device-width, initial-scale=1')
 
 //- referencement
 meta(name='keyword' content='Hélène Bou cirque aérien corde lisse toulouse grainerie théâtre baroque midi pyrénées')
+meta(name='author' content='Yannick Chudy')
+meta(name='author' content='Hélène Bou')
 meta(name='author' content='bleuetdoré')
-meta(name='description' content='Artiste de cirque aérien en corde lisse et comédienne, Hélène Bou.   ')
 
+//- include meta
+//- variable `meta` should be declared in page
+title  #{meta.title}
+meta(name='description', content=meta.description)
 
-
+meta(property='og:title', content=meta.title)
+meta(property='og:description', content=meta.description)
+meta(property='og:image', content=meta.image)
 
 
 

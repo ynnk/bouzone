@@ -28,15 +28,25 @@ p code {
 
 #article-top{
     background:#FFF;
+/*
     padding-top: 20px;
     margin-top: 0px;
+*/
 }
 #article-top.row .column {
-    padding-bottom: 2px !important;
-    padding-top: 0px !important;
+/*
+    padding-bottom: 4px !important;
+    padding-top: 2px !important;
+*/
+
 }
 #article-top h1 {
     margin-top:8px;
+}
+
+
+#article-content {
+    margin-top: 10px !important;
 }
 
 
@@ -55,7 +65,7 @@ p code {
 
 
 #footer.row .column{
-    margin-top:20px !important;
+    margin-top:12px !important;
     margin-bottom:10px !important;
 }
 

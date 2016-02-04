@@ -1,4 +1,4 @@
-.PHONY: install build site
+.PHONY: install build site bower
 
 all: install build archive run
 
@@ -14,17 +14,18 @@ npm:
 
 bower:
 	./node_modules/bower/bin/bower install
-	mv ./bower_components ./site/
-
+	mv bower_components/ ./site/
+	
 build: 
 	@echo "\n * Building jade -> html"
 	@echo " --------------------------\n"
 	@echo "building " > ./site/build.html 
 	
-	node compile-babel-jade.js src/*.jade ./site
+	node compile-babel-jade.js src/*.jade  ./site
 
 archive:
-	tar -czf bou.zone.tar.gz ./site makefile ./src	bower.json compile-babel-jade.js
+	@echo "\n * Creating archive "
+	tar -czvf bou.zone.tar.gz ./site 
 
 extract:
 	tar -czf bou.zone.tar.gz

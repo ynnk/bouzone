@@ -20,18 +20,17 @@ block title
 block meta
     p
       strong Durée : 30 min
-      br/
-      span Tout public à partir de 10 ans
+      span -  
+      span Tout public 
 
 block infos
-    p
-        a.ui.tiny.right.floated.basic.button( href="quinn-english.html") English version
+    a.ui.tiny.right.floated.basic.button.item( href="quinn-english.html#art") English version
 
 
     
 block content
 
-  img.ui.fluid.centered.image(src="/images/quinn/quinn_01.png", alt=" Quinn - corde lisse. Hélène Bou @ La Grainerie -  Toulouse  ")
+  img.ui.fluid.centered.image(src="/images/quinn/quinnbowie2.jpeg", alt=" Quinn - corde lisse. Hélène Bou @ La Grainerie -  Toulouse  ")
   
   .ui.hidden.divider
 
@@ -66,6 +65,15 @@ block content
   p.
     La scénographie ouvre à tout type de jeux ( frontal, circulaire). <br/>
     Je tiens à ce que le public se sente témoin et observateur, pris dans l’intimité de quelque chose en cours, dans cette perspective la proximité du public me parait être une piste à privilégier.
+
+  .ui.hidden.divider
+
+
+  .ui.embed(data-source="vimeo" data-url="http://player.vimeo.com/video/155976356")
+  script(src="bower_components/jquery/dist/jquery.min.js")
+  script(src="bower_components/semantic-ui/dist/semantic.min.js")
+  script.
+    $('.ui.embed').embed();
 
   .ui.hidden.divider
 

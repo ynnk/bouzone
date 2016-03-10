@@ -29,25 +29,25 @@ html(lang='fr')
                         .ui.secondary.compact.text.menu
                             a.item(href='index.html')
                               i.icon.home
-                            a.item.left.title(href='helene-bou-bio.html#42')
+                            a.item.left.title(href='helene-bou-bio.html#art')
                               | Who's Bou?
 
                       .column
                         .ui.secondary.compact.text.menu
                             div.down.item
                               i.tiny.asterisk.icon
-                            a.item.left.title(href='opsis.html#42')
+                            a.item.left.title(href='opsis.html#art')
                               | Opsis
-                            a.item.left.title(href='quinn.html#42')
+                            a.item.left.title(href='quinn.html#art')
                               | Quinn
-                            a.item.left.title(href='synopsis.html#42')
+                            a.item.left.title(href='synopsis.html#art')
                               | SynOPSIS
                             div.down.item
                               i.tiny.asterisk.icon
                                 
                       .column
                         .ui.secondary.compact.text.menu
-                            a.item.left.title(href='echappees.html#42')
+                            a.item.left.title(href='echappees.html#art')
                               | Echappées
                             a.item.left.title(href='contact.html')
                               | Contact
@@ -57,27 +57,28 @@ html(lang='fr')
                     .ui.divider
 
         
-        .ui.sticky 
-            a(name="42")
+        .ui.sticky
             .ui.container.grid
               #article-top.centered.row
                 .left.aligned.column
-                    .ui.stackable.grid
-                      .three.column.row
-                        .column
+                    a(name="art")
+                           .ui.text.menu
+                             .item 
+                               block title
 
-                            block title
+                             .ui.text.right.menu  
+                                 block infos
+                                 a.icon.item#gotomenu( href="#top")
+                                   i.icon.sidebar
                             
-                        .bottom.aligned.column
-
-                            block meta
                             
-                        .top.aligned.column
-
-                            block infos
 
                 
         #article-grid.ui.container.grid
+          .row
+            .left.aligned.column
+                block meta
+
           .centered.row
             #article-content.left.aligned.justified.column
                 

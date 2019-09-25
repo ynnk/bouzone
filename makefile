@@ -3,7 +3,7 @@
 all: install build archive run
 
 
-install: env npm bower
+install: npm bower
 	
 
 npm:

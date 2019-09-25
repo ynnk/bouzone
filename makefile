@@ -21,7 +21,7 @@ build:
 	@echo " --------------------------\n"
 	@echo "building " > ./site/build.html 
 	
-	node compile-babel-jade.js src/*.jade  ./site
+	node compile-babel-jade.js src/*.jade  ./site >> ./site/build.html 
 
 archive:
 	@echo "\n * Creating archive "
